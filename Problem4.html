@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScriptWorkShip</title>
+        <style media="screen">
+            #myCanvas {
+                color: red;
+                border: dotted;
+            }
+            #imgJs {
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas id="myCanvas" width="400" height="400">Your Browser doesn't support canvas</canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "40px Georgia";
+            ctx.fillText("I Love JavaScript", 30, 50);
+        </script>
+        <!-- <img id="imgJs" src="file:///C:/Users/PC-PC/Desktop/2.2.%20Semantic-HTML-and-Other-Tags-Homework/logo.jpg" alt="Smths Wrong" /> -->
+        <script>
+        //    window.onload = function() {
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            // var img = document.getElementById("imgJs");
+            var imgObj = new Image();
+            imgObj.onload = function() {
+            ctx.drawImage(imgObj, 75, 100, 250,250);
+        };
+        imgObj.src = 'file:///C:/Users/PC-PC/Desktop/2.2.%20Semantic-HTML-and-Other-Tags-Homework/logo.jpg';
+
+        </script>
+    </body>
+</html>
